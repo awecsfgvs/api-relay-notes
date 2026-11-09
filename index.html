@@ -162,9 +162,9 @@
 
     <div class="cta">
       <p>注册有体验额度，先白嫖一轮再决定要不要充值，不吃亏</p>
-      <a class="btn" href="https://https://www.deepseek.com/register?aff=J83SY6B6R9WF" rel="noopener" target="_blank">领取体验额度 →</a>
-      <div class="url"><code id="aff">https://https://www.deepseek.com/register?aff=J83SY6B6R9WF</code></div>
-      <button class="copy" id="copyBtn" type="button">复制邀请链接</button>
+      <a class="btn" href="https://https://www.deepseek.com/register?aff=J83SY6B6R9WF" rel="noopener" target="_blank">去注册（邀请码 J83SY6B6R9WF）→</a>
+      <div class="url">邀请码 <code id="aff">J83SY6B6R9WF</code>（注册时填入「邀请码」框）</div>
+      <button class="copy" id="copyBtn" type="button">复制邀请码</button>
     </div>
 
     <p style="margin-top:38px;color:var(--dim)">折腾链路的时间，还是拿去做产品比较划算。</p>
@@ -181,11 +181,10 @@
   document.getElementById('d').textContent = new Date().toLocaleDateString('zh-CN');
   var btn = document.getElementById('copyBtn');
   btn.addEventListener('click', function(){
-    var t = document.getElementById('aff').textContent.trim() + "
-邀请码：J83SY6B6R9WF";
+    var t = "J83SY6B6R9WF";
     navigator.clipboard.writeText(t).then(function(){
       btn.textContent = '已复制 ✓';
-      setTimeout(function(){ btn.textContent = '复制邀请链接'; }, 1800);
+      setTimeout(function(){ btn.textContent = '复制邀请码'; }, 1800);
     }).catch(function(){
       btn.textContent = '长按上方链接复制';
     });
