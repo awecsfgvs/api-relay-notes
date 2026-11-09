@@ -105,7 +105,7 @@
 
     <p>不是不会写，是链路太脏。海外信用卡办不下来，办下来还可能被风控；公司网络时通时断，重试逻辑写得比业务代码还长；换个模型要从头读一遍文档，SDK 参数名字对不上，改到怀疑人生。最气的是你好不容易把 A 家的接口调顺了，想试试 B 家的效果，发现自己又得重写一遍请求层。</p>
 
-    <p>前后折腾了小半年，试过直连、试过自建代理、试过让朋友代付，最后落地的方案其实很朴素：<strong>把所有请求收敛到同一个 OpenAI 兼容的入口上</strong>。</p>
+    <p>前后折腾了小半年，试过直连、试过自建代理、试过让朋友代付，最后落地的方案其实很朴素：<strong>把所有请求收敛到同一个 OpenAI 兼容的入口上</strong>。我用的是「自部署AI」这个站（Sub2API 搭的中转网关），下面写的就是它的实际用法。</p>
 
     <h2>改动只有一行</h2>
 
@@ -115,7 +115,7 @@
 <span class="k">base_url</span> = <span class="s">"https://api.openai.com/v1"</span>
 
 <span class="c"># 现在</span>
-<span class="k">base_url</span> = <span class="s">"https://https://www.deepseek.com/v1"</span></code></pre>
+<span class="k">base_url</span> = <span class="s">"https://www.dahurj999.top/v1"</span></code></pre>
 
     <p>key 换掉，模型名按站点文档填，跑起来。LangChain、LlamaIndex、Dify、Cherry Studio、Chatbox、One API 这类工具基本都支持自定义 base_url，填进去就能用，业务代码一行不用动。</p>
 
@@ -124,7 +124,7 @@
     <div class="grid">
       <div class="card">
         <h3><span>01</span>不用信用卡，不用科学上网</h3>
-        <p>国内网络直连，付款也是国内习惯的那几种。对"就想先花二十块试试水"的人来说，这一点比任何参数都重要——不用先证明自己有还款能力，才能开始写代码。</p>
+        <p>国内网络直连，付款也是国内习惯的那几种（支付宝/微信这类）。对"就想先花二十块试试水"的人来说，这一点比任何参数都重要——不用先证明自己有还款能力，才能开始写代码。</p>
       </div>
       <div class="card">
         <h3><span>02</span>多模型一个入口，切换是改字符串</h3>
@@ -159,8 +159,8 @@
 
     <div class="cta">
       <p>注册有体验额度，先白嫖一轮再决定要不要充值，不吃亏</p>
-      <a class="btn" href="https://https://www.deepseek.com/register?aff=J83SY6B6R9WF" rel="noopener" target="_blank">领取体验额度 →</a>
-      <div class="url"><code id="aff">https://https://www.deepseek.com/register?aff=J83SY6B6R9WF</code></div>
+      <a class="btn" href="https://www.dahurj999.top/register?aff=J83SY6B6R9WF" rel="noopener" target="_blank">领取体验额度 →</a>
+      <div class="url"><code id="aff">https://www.dahurj999.top/register?aff=J83SY6B6R9WF</code></div>
       <button class="copy" id="copyBtn" type="button">复制邀请链接</button>
     </div>
 
