@@ -68,7 +68,7 @@
     background:linear-gradient(160deg,rgba(79,140,255,.16),rgba(34,211,166,.09));
     border:1px solid rgba(79,140,255,.3)}
   .cta p{margin:0 0 6px;color:var(--dim);font-size:14.5px}
-  .btn{display:inline-block;margin:16px 0 12px;padding:14px 34px;border-radius:11px;
+  .btn{display:inline-block;border:0;cursor:pointer;font-family:inherit;margin:16px 0 12px;padding:14px 34px;border-radius:11px;
     background:linear-gradient(100deg,var(--acc),#3a6fe0);color:#fff;text-decoration:none;
     font-weight:700;font-size:16px;box-shadow:0 10px 28px -10px rgba(79,140,255,.85);
     transition:transform .15s ease,box-shadow .15s ease}
@@ -162,7 +162,7 @@
 
     <div class="cta">
       <p>注册有体验额度，先白嫖一轮再决定要不要充值，不吃亏</p>
-      <a class="btn" href="https://https://www.deepseek.com/register?aff=J83SY6B6R9WF" rel="noopener" target="_blank">去注册（邀请码 J83SY6B6R9WF）→</a>
+      <button class="btn" id="copyBtn2" type="button">复制邀请码 J83SY6B6R9WF</button>
       <div class="url">邀请码 <code id="aff">J83SY6B6R9WF</code>（注册时填入「邀请码」框）</div>
       <button class="copy" id="copyBtn" type="button">复制邀请码</button>
     </div>
@@ -180,6 +180,14 @@
 <script>
   document.getElementById('d').textContent = new Date().toLocaleDateString('zh-CN');
   var btn = document.getElementById('copyBtn');
+  var btn2 = document.getElementById('copyBtn2');
+  var grab = function(){
+    navigator.clipboard.writeText('J83SY6B6R9WF').then(function(){
+      btn.textContent = '已复制 ✓'; btn2.textContent = '已复制 ✓';
+      setTimeout(function(){ btn.textContent = '复制邀请码'; btn2.textContent = '复制邀请码 J83SY6B6R9WF'; }, 1800);
+    }).catch(function(){ btn2.textContent = '长按邀请码手动复制'; });
+  };
+  btn2.addEventListener('click', grab);
   btn.addEventListener('click', function(){
     var t = "J83SY6B6R9WF";
     navigator.clipboard.writeText(t).then(function(){
